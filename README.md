@@ -30,11 +30,11 @@ The scraper extracts the following fields for each product:
 | openpyxl      | Writing data to Excel          |
 
 ## 📦 Python Libraries Required
-requests
-beautifulsoup4
-tqdm
-pandas
-openpyxl
+#requests
+#beautifulsoup4
+#tqdm
+#pandas
+#openpyxl
 
 ## ⚙️ Installation
 Clone the repository:
