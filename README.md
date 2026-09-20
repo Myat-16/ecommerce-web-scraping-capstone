@@ -1,60 +1,52 @@
-🛒 CityMall Computer Components Scraper
-📌 Project Title
+# 🛒 CityMall Computer Components Scraper
+
+## 📌 Project Title
 CityMall.com.mm Computer Components Scraper
 
-🎯 Project Objective
-To build a Python-based web scraper that collects product information (name, price, seller, and product link) from the Computer Components & Accessories category on CityMall Myanmar.
+## 🎯 Project Objective
+A Python-based web scraper that collects product information (name, price, seller, and product link) from the **Computer Components & Accessories** category on CityMall Myanmar.  
 The scraper handles one page, cleans the extracted data, and exports results into an Excel file.
 
-🌐 Website Name and URL
-Website: CityMall Myanmar
+## 🌐 Website Name and URL
+- **Website:** CityMall Myanmar  
+- **Category URL:**  
+  https://www.citymall.com.mm/citymall/en/Categories/Home-%26-Living-Lifestyle/Electronics/Computer-Components-%26-Accessories/c/id05011003
 
-Category URL:  
-https://www.citymall.com.mm/citymall/en/Categories/Home-%26-Living-Lifestyle/Electronics/Computer-Components-%26-Accessories/c/id05011003
-
-📊 Description of the Data Extracted
+## 📊 Description of the Data Extracted
 The scraper extracts the following fields for each product:
+- Product Name  
+- Product Price (Ks → converted to float)  
+- Seller / Shop Name  
+- Product Link (full URL)
 
-Product Name
+## 🛠️ Technologies / Libraries Used
+| Technology    | Purpose                        |
+|---------------|--------------------------------|
+| Python        | Main programming language      |
+| Requests      | Sending HTTP requests          |
+| BeautifulSoup | Parsing and extracting HTML    |
+| Pandas        | Creating and managing dataset  |
+| tqdm          | Displaying scraping progress   |
+| openpyxl      | Writing data to Excel          |
 
-Product Price (Ks → converted to float)
-
-Seller / Shop Name
-
-Product Link (full URL)
-
-🛠️ Technologies / Libraries Used
-Technology	Purpose
-Python	Main programming language
-Requests	Sending HTTP requests
-BeautifulSoup	Parsing and extracting HTML
-Pandas	Creating and managing dataset
-tqdm	Displaying scraping progress
-openpyxl	Writing data to Excel
-
-
-📦 Python Libraries Required
-Code
+## 📦 Python Libraries Required
 requests
 beautifulsoup4
 tqdm
 pandas
 openpyxl
-⚙️ Installation
-Clone the repository:
 
-bash
+## ⚙️ Installation
+Clone the repository:
+```bash
 git clone https://github.com/your-username/citymall-scraper.git
 cd citymall-scraper
-Install dependencies:
-
-bash
-pip install -r requirements.txt
 ▶️ How to Run the Program
 Run the Python script:
-
-bash
 python citymall_scraper.py
+
+pip install -r requirements.txt
+
 The scraper will:
 
 Send requests to CityMall product pages.
@@ -73,15 +65,13 @@ Price → Product price (float)
 Seller → Seller/shop name
 
 Link → Full product URL
-
 📊 Sample Output
-Name	Price	Seller	Link
-Anitech Wires Optical Mouse	23,500	Sold by CMHL	Product Link
-Logitech Wireless Mouse M185	60,000	Sold by CMHL	Product Link
-Kingston Micro SD 32GB	15,000	Sold by CMHL	Product Link
 
-
-(You can add a screenshot of your Excel output here if desired.)
+| Name | Price | Seller | Link |
+| --- | --- | --- | --- |
+| Anitech Wires Optical Mouse | 23,500 | Sold by CMHL | Product Link |
+| Logitech Wireless Mouse M185 | 60,000 | Sold by CMHL | Product Link |
+| Kingston Micro SD 32GB | 15,000 | Sold by CMHL | Product Link |
 
 📈 Number of Products / Pages Scraped
 Pages scraped: 1
