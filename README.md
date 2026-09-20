@@ -1,15 +1,20 @@
 🛒 CityMall Computer Components Scraper
-📌 Project Objective
-A Python-based web scraper that collects product information (name, price, seller, and product link) from the Computer Components & Accessories category on CityMall Myanmar.
+📌 Project Title
+CityMall.com.mm Computer Components Scraper
+
+🎯 Project Objective
+To build a Python-based web scraper that collects product information (name, price, seller, and product link) from the Computer Components & Accessories category on CityMall Myanmar.
 The scraper handles one page, cleans the extracted data, and exports results into an Excel file.
 
-🌐 Website
+🌐 Website Name and URL
 Website: CityMall Myanmar
 
 Category URL:  
 https://www.citymall.com.mm/citymall/en/Categories/Home-%26-Living-Lifestyle/Electronics/Computer-Components-%26-Accessories/c/id05011003
 
-📊 Data Extracted
+📊 Description of the Data Extracted
+The scraper extracts the following fields for each product:
+
 Product Name
 
 Product Price (Ks → converted to float)
@@ -18,17 +23,24 @@ Seller / Shop Name
 
 Product Link (full URL)
 
-🛠️ Technologies Used
+🛠️ Technologies / Libraries Used
 Technology	Purpose
 Python	Main programming language
 Requests	Sending HTTP requests
 BeautifulSoup	Parsing and extracting HTML
-Pandas	Creating/managing dataset
-tqdm	Progress bar (optional)
+Pandas	Creating and managing dataset
+tqdm	Displaying scraping progress
 openpyxl	Writing data to Excel
 
 
-📦 Installation
+📦 Python Libraries Required
+Code
+requests
+beautifulsoup4
+tqdm
+pandas
+openpyxl
+⚙️ Installation
 Clone the repository:
 
 bash
@@ -38,7 +50,7 @@ Install dependencies:
 
 bash
 pip install -r requirements.txt
-▶️ How to Run
+▶️ How to Run the Program
 Run the Python script:
 
 bash
@@ -53,39 +65,44 @@ Extract product details.
 
 Export results to Exported_Data.xlsx.
 
-📑 Sample Output
+📑 Data Fields Extracted
+Name → Product name
+
+Price → Product price (float)
+
+Seller → Seller/shop name
+
+Link → Full product URL
+
+📊 Sample Output
 Name	Price	Seller	Link
 Anitech Wires Optical Mouse	23,500	Sold by CMHL	Product Link
 Logitech Wireless Mouse M185	60,000	Sold by CMHL	Product Link
 Kingston Micro SD 32GB	15,000	Sold by CMHL	Product Link
 
 
-⚠️ Challenges
-Identifying correct HTML tags/classes (div.product-info).
+(You can add a screenshot of your Excel output here if desired.)
 
-Handling missing or inconsistent seller names.
+📈 Number of Products / Pages Scraped
+Pages scraped: 1
 
-Cleaning price values (removing commas and “Ks”).
+Products scraped: ~20–24 (depending on items listed on the page)
 
-🧩 Main Functions
-extract_name() → Extracts product name.
+⚠️ Challenges Encountered
+Identifying correct HTML tags/classes (div.product-info)
 
-extract_price() → Cleans and converts price to float.
+Handling missing or inconsistent seller names
 
-extract_seller() → Extracts seller/shop name.
+Cleaning price values (removing commas and “Ks”)
 
-extract_link() → Builds full product URL.
+📝 Important Notes / Limitations
+The scraper currently works for one page only.
 
-export_as_excel() → Saves data to Excel.
+To extend to multiple pages, pagination logic must be added.
 
-⚙️ Configuration
-To scrape another category, replace the URL in:
+The scraper depends on CityMall’s current HTML structure. If the website changes, functions may need updating.
 
-python
-my_url = "https://www.citymall.com.mm/citymall/en/Categories/.../c/idXXXXXX"
-⚠️ Important Notes
-Website Changes: If CityMall updates its HTML structure, functions may need editing.
+Data is for educational purposes only.
 
-Request Rate: Add delays (time.sleep()) if scraping multiple pages.
-
-Legal:
+👨‍💻 Project Author
+Developed by: Myat Myat Nwe
